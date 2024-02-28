@@ -1,8 +1,6 @@
 """  From 'The ultimate introduction to Pygame' (Clear Code)  """
 """  When this project is finished, try to create a *Pong-game* completely on your own!  """
 
-""" Continue at 02:49: """
-
 """Knowledge:
         - The parameter of a surface always position it's upper left corner 
         - With the help of rectangles, you can position a surface also by it's other corners or edges
