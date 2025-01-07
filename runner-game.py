@@ -1,11 +1,12 @@
-"""  From 'The ultimate introduction to Pygame' (Clear Code)  """
-"""  When this project is finished, try to create a *Pong-game* completely on your own!  """
+"""  Inspired by 'The ultimate introduction to Pygame' by 'Clear Code'.
+    This was my very first python project and hence there are many comments
+    that explained the code to myself. I left them in here, because I think 
+    they might be helpful for other beginners as well."""
 
-"""Knowledge:
+"""Useful Knowledge:
         - The parameter of a surface always position it's upper left corner 
         - With the help of rectangles, you can position a surface also by it's other corners or edges
         - You can get information about the mouse input of the user via pygame.mouse or the event loop -> see doc
-
 """
 
 import pygame
@@ -17,10 +18,10 @@ class Player(pygame.sprite.Sprite): # inherits from class in the braces
     def __init__(self):
         super().__init__()
         player_walk_1 = pygame.image.load('graphics/player/player_walk_1.png').convert_alpha()
-        player_walk_2 = pygame.image.load('graphics\player\player_walk_2.png').convert_alpha()
+        player_walk_2 = pygame.image.load('graphics/player/player_walk_2.png').convert_alpha()
         self.player_walk = [player_walk_1, player_walk_2] # 'self.' because I am going to need that in the entire class (global variable)
         self.player_index = 0
-        self.player_jump = pygame.image.load('graphics\player\jump.png').convert_alpha()
+        self.player_jump = pygame.image.load('graphics/player/jump.png').convert_alpha()
         
         self.image = self.player_walk[self.player_index]
         self.rect = self.image.get_rect(midbottom =(80,300))
@@ -172,17 +173,17 @@ fly_surf = fly_frames[fly_frame_index]
 obstacle_rect_list = []
 
 player_walk_1 = pygame.image.load('graphics/player/player_walk_1.png').convert_alpha()
-player_walk_2 = pygame.image.load('graphics\player\player_walk_2.png').convert_alpha()
+player_walk_2 = pygame.image.load('graphics/player/player_walk_2.png').convert_alpha()
 player_walk = [player_walk_1, player_walk_2]
 player_index = 0
-player_jump = pygame.image.load('graphics\player\jump.png').convert_alpha()
+player_jump = pygame.image.load('graphics/player/jump.png').convert_alpha()
 
 player_surf = player_walk[player_index]
 player_rect = player_surf.get_rect(midbottom = (80, 300))
 player_gravity = 0
 
 #Intro screen
-player_stand = pygame.image.load('graphics\player\player_stand.png').convert_alpha()
+player_stand = pygame.image.load('graphics/player/player_stand.png').convert_alpha()
 player_stand = pygame.transform.rotozoom(player_stand, 0, 2) # scale player_surface to a larger size, cool function!
 player_stand_rect = player_stand.get_rect(center = (display_width/2, display_height/2))
 
@@ -287,7 +288,7 @@ while True:
 
 
 
-"""Bonus section including every function that's been taught in the video:"""
+"""Bonus section including useful functions that've been taught in the video:"""
 
 #test_surface = pygame.Surface((100, 200)) # create a surface
 #test_surface.fill('Red') # fills surface with a specific color
